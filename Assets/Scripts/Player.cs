@@ -20,23 +20,26 @@ public class Player : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
-        if(transform.position.y < -5)
+        if (transform.position.y < -5)
         {
             Die();
         }
     }
+
     private void FixedUpdate()
     {
-        if (!isALive) return; 
+        if (!isALive) return;
         Vector3 forward = transform.forward * speed * Time.fixedDeltaTime;
         Vector3 horizontalMove = transform.right * horizontalInput * speed * Time.fixedDeltaTime;
         rb.MovePosition(rb.position + forward + horizontalMove);
     }
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
