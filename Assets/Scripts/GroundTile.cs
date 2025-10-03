@@ -28,22 +28,23 @@ public class GroundTile : MonoBehaviour
 
     void SpawnCoin()
     {
+        // Chỉ spawn coin vào 3 lane cố định (trái - giữa - phải)
+        float laneDistance = 1.3f; // Phải khớp với laneDistance trong Player.cs
+        float[] lanePositions = { -laneDistance, 0f, laneDistance }; // 3 lane: trái, giữa, phải
+        
+        // Chọn ngẫu nhiên 1 trong 3 lane
+        int randomLane = Random.Range(0, 3);
+        float targetX = lanePositions[randomLane];
+        
+        // Lấy vị trí Z ngẫu nhiên trong ground tile
+        Collider groundCollider = GetComponent<Collider>();
+        float randomZ = Random.Range(groundCollider.bounds.min.z, groundCollider.bounds.max.z);
+        
+        // Tạo vị trí spawn cho coin
+        Vector3 coinPosition = new Vector3(targetX, 1f, randomZ);
+        
         GameObject temp = Instantiate(coinPrefab, transform);
-        temp.transform.position = GetRandomPointInCollider(GetComponent<Collider>());
+        temp.transform.position = coinPosition;
     }
 
-    Vector3 GetRandomPointInCollider(Collider collider)
-    {
-        Vector3 point = new Vector3(
-            Random.Range(collider.bounds.min.x, collider.bounds.max.x),
-            Random.Range(collider.bounds.min.y, collider.bounds.max.y),
-            Random.Range(collider.bounds.min.z, collider.bounds.max.z)
-        );
-        if (point != collider.ClosestPoint(point))
-        {
-            point = GetRandomPointInCollider(collider);
-        }
-        point.y = 1;
-        return point;
-    }
 }

@@ -818,6 +818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 6
   jumpForce: 10
+  laneDistance: 1.3
+  laneChangeSpeed: 10
+  swipeThreshold: 50
 --- !u!4 &830687147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dad1e8a2ed3b9548afead59684a24e0, type: 3}
