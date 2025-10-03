@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     private Rigidbody rb;
     [SerializeField] float speed = 20f;
     //jump
@@ -13,9 +14,14 @@ public class Player : MonoBehaviour
 
     // Lane system
     [SerializeField] float laneDistance = 1.3f; // Khoảng cách giữa các lane
+    [SerializeField] float laneOffset = -0.28f; // Dịch tất cả các lane sang trái/phải
     private int currentLane = 1; // 0 = trái, 1 = giữa, 2 = phải
     private float targetX; // Vị trí X mục tiêu
     [SerializeField] float laneChangeSpeed = 10f; // Tốc độ chuyển lane
+    
+    // Public getters để GroundTile có thể truy cập
+    public float LaneDistance => laneDistance;
+    public float LaneOffset => laneOffset;
 
     // Touch/Swipe controls
     private Vector2 startTouchPosition;
@@ -23,11 +29,12 @@ public class Player : MonoBehaviour
     [SerializeField] float swipeThreshold = 50f;
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody>();
         animator = gameObject.GetComponentInChildren<Animator>();
 
         // Khởi tạo vị trí ban đầu ở lane giữa
-        targetX = transform.position.x;
+        targetX = (currentLane - 1) * laneDistance + laneOffset;
         currentLane = 1;
     }
 
@@ -123,7 +130,7 @@ public class Player : MonoBehaviour
         if (newLane >= 0 && newLane <= 2)
         {
             currentLane = newLane;
-            targetX = (currentLane - 1) * laneDistance; // -1 để lane giữa ở vị trí 0
+            targetX = (currentLane - 1) * laneDistance + laneOffset; // -1 để lane giữa ở vị trí 0, + offset để dịch
         }
     }
 

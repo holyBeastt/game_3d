@@ -819,6 +819,7 @@ MonoBehaviour:
   speed: 6
   jumpForce: 10
   laneDistance: 1.3
+  laneOffset: -0.28
   laneChangeSpeed: 10
   swipeThreshold: 50
 --- !u!4 &830687147 stripped
@@ -2302,8 +2303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 488}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 12.059, y: 1760}
+  m_SizeDelta: {x: 222.118, y: 29.725}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075373949
 MonoBehaviour:
@@ -2390,7 +2391,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: -36.863075}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
