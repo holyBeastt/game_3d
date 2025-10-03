@@ -1,0 +1,2 @@
+D:\hoc\kma\game_3d\final_v2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\hoc\kma\game_3d\final_v2\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
