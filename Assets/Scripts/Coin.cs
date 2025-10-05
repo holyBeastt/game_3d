@@ -15,9 +15,15 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Coin collected by Player!");
             if (GameManager.instance != null)
             {
+                Debug.Log("Calling GameManager.AddScore(1)");
                 GameManager.instance.AddScore(1);
+            }
+            else
+            {
+                Debug.LogError("GameManager.instance is NULL!");
             }
             Destroy(gameObject);
         }

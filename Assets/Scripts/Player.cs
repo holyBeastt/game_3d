@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private int currentLane = 1; // 0 = trái, 1 = giữa, 2 = phải
     private float targetX; // Vị trí X mục tiêu
     [SerializeField] float laneChangeSpeed = 10f; // Tốc độ chuyển lane
-    
+
     // Public getters để GroundTile có thể truy cập
     public float LaneDistance => laneDistance;
     public float LaneOffset => laneOffset;
@@ -40,6 +40,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // Nếu game đã kết thúc (victory), không cho phép input
+        if (GameManager.instance != null && GameManager.instance.gameEnded)
+        {
+            return;
+        }
+        
         // Desktop controls (keyboard/gamepad)
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
@@ -138,6 +144,12 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         if (!isALive) return;
+        
+        // Nếu game đã kết thúc (victory), dừng di chuyển
+        if (GameManager.instance != null && GameManager.instance.gameEnded)
+        {
+            return;
+        }
 
         // Di chuyển tiến về phía trước
         Vector3 forward = transform.forward * speed * Time.fixedDeltaTime;
@@ -182,10 +194,17 @@ public class Player : MonoBehaviour
     {
         if (!isALive) return; // Tránh gọi nhiều lần
         
+        // Nếu game đã kết thúc (victory), không cho phép chết
+        if (GameManager.instance != null && GameManager.instance.gameEnded)
+        {
+            return;
+        }
+
         isALive = false;
+
         ShowGameOver();
     }
-    
+
     private void ShowGameOver()
     {
         if (GameUI.instance != null)

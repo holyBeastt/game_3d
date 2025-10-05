@@ -2758,7 +2758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   score: 0
   scoreText: {fileID: 2075373949}
-  victoryScore: 50
+  victoryScore: 5
+  gameEnded: 0
 --- !u!4 &1806199117
 Transform:
   m_ObjectHideFlags: 0
