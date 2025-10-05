@@ -15,7 +15,10 @@ public class Coin : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            GameManager.instance.score += 1;
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.AddScore(1);
+            }
             Destroy(gameObject);
         }
 

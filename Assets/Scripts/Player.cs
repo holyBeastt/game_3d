@@ -180,12 +180,22 @@ public class Player : MonoBehaviour
     }
     public void Die()
     {
+        if (!isALive) return; // Tránh gọi nhiều lần
+        
         isALive = false;
-        GameOver();
-
+        ShowGameOver();
     }
-    public void GameOver()
+    
+    private void ShowGameOver()
     {
-        SceneManager.LoadScene("SampleScene");
+        if (GameUI.instance != null)
+        {
+            GameUI.instance.ShowGameOver();
+        }
+        else
+        {
+            // Fallback nếu không có GameUI
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
