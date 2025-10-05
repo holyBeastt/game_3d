@@ -99,33 +99,17 @@ public class GameUI : MonoBehaviour
 
     public void ShowVictory()
     {
-        Debug.Log("GameUI.ShowVictory() called");
         HideAllPanels();
-        
-        if (victoryPanel != null)
-        {
-            victoryPanel.SetActive(true);
-            Debug.Log("Victory panel activated");
-        }
-        else
-        {
-            Debug.LogError("Victory panel is NULL!");
-        }
+        victoryPanel.SetActive(true);
 
         // Hiển thị điểm số cuối cùng
         if (victoryScoreText != null && GameManager.instance != null)
         {
             victoryScoreText.text = "Final Score: " + GameManager.instance.score;
-            Debug.Log($"Victory score text set to: {victoryScoreText.text}");
-        }
-        else
-        {
-            Debug.LogError("Victory score text or GameManager is NULL!");
         }
 
         // Pause game
         Time.timeScale = 0f;
-        Debug.Log("Game paused (Time.timeScale = 0)");
     }
 
     public void PauseGame()
