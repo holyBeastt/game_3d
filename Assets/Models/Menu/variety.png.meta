@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: 8bb3c8ba8766159479397ea8beb18696
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: variety_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 3751
+        width: 398
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8397419760b3b39458a748f6e03bbeee
+      internalID: -1135371415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_1
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 3735
+        width: 442
+        height: 474
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8aefa4ebcd1fc4f894f15da9fff601
+      internalID: 10243513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_2
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 3735
+        width: 437
+        height: 474
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530ef3335f16dfa459e46be941807bfe
+      internalID: 98866809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_3
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 3735
+        width: 1267
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9579fbaec53e0d6419c2ae929c929d37
+      internalID: 1883107405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_4
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 3762
+        width: 424
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6077d67fdb35cb24f9c207e4fc545fb0
+      internalID: 60843879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_5
+      rect:
+        serializedVersion: 2
+        x: 2697
+        y: 3719
+        width: 450
+        height: 475
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb7dd10af8920341a5f1e9b8f82d55b
+      internalID: 1840596961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_6
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 3716
+        width: 459
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26460b204c47b2e40aa593fe79abee93
+      internalID: -530309543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_7
+      rect:
+        serializedVersion: 2
+        x: 3737
+        y: 3704
+        width: 458
+        height: 447
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf583a1ac2d2ac4096fd6420b217b92
+      internalID: -1364497957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_8
+      rect:
+        serializedVersion: 2
+        x: 4221
+        y: 3703
+        width: 457
+        height: 422
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad906d0895c6f08409359f449b7e53ab
+      internalID: 219606634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_9
+      rect:
+        serializedVersion: 2
+        x: 4768
+        y: 3673
+        width: 474
+        height: 427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c925d0078be47664f8e03c4537797529
+      internalID: -1818106692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 1339
+        height: 1723
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac3d80c9bc51b34a911baa322768861
+      internalID: -1997667525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_11
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 3344
+        width: 883
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b5451619bed8d47bff273ef06d26ba
+      internalID: -209886291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_12
+      rect:
+        serializedVersion: 2
+        x: 2312
+        y: 3344
+        width: 913
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2fe3dcaff316f45b5c4caa4308e144
+      internalID: -1323098577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_13
+      rect:
+        serializedVersion: 2
+        x: 3283
+        y: 3219
+        width: 442
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6429a74e160eeed40b6e93e342e4eec9
+      internalID: -358632109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_14
+      rect:
+        serializedVersion: 2
+        x: 3795
+        y: 3188
+        width: 446
+        height: 474
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b749005a7a2394480d9551dd46a0e3
+      internalID: 844204517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_15
+      rect:
+        serializedVersion: 2
+        x: 4295
+        y: 3262
+        width: 1044
+        height: 338
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1cbf4339092be468dbb15409ab7cba
+      internalID: 2011497421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_16
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2891
+        width: 881
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9147124a4a35e4686915d95ea8309a
+      internalID: 108059746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_17
+      rect:
+        serializedVersion: 2
+        x: 2384
+        y: 2906
+        width: 855
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1f5f5b3b0847e41bbbd03749814987
+      internalID: -182300091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_18
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 2406
+        width: 1256
+        height: 677
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653a16b88402f9c4f8e3b2be12b8fda4
+      internalID: 223316988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_19
+      rect:
+        serializedVersion: 2
+        x: 4949
+        y: 2781
+        width: 279
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f825511d87f4e4098788effc4874ea
+      internalID: 1338076241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_20
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 2470
+        width: 974
+        height: 312
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd45ba34f238732439d6327ec8dffc10
+      internalID: 856620511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_21
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 2453
+        width: 537
+        height: 378
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f4004b843b3c246be657f8a8c4b3e2
+      internalID: -1573774270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_22
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 2468
+        width: 512
+        height: 412
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f6c6d0404f9164db96ade8394d8e32
+      internalID: 1711485418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_23
+      rect:
+        serializedVersion: 2
+        x: 4936
+        y: 2425
+        width: 338
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6e6d55db558f140b536a7695e0ae84
+      internalID: -1465490195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_24
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1859
+        width: 1647
+        height: 488
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb821e26b1a2c8e4b993dd7fd5ac46b3
+      internalID: -1854721366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_25
+      rect:
+        serializedVersion: 2
+        x: 3377
+        y: 1858
+        width: 1395
+        height: 489
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39adce72c1de7d4aabeb92c6dd25c9b
+      internalID: 1978235239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_26
+      rect:
+        serializedVersion: 2
+        x: 4944
+        y: 1984
+        width: 280
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8ee737a60803849b8bd6176991c136
+      internalID: -2091979982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1641
+        width: 1438
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca77eff40531384ebfe8acbfea519df
+      internalID: -1721580250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_28
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 498
+        width: 1066
+        height: 1303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fec309d21aaf443b5d329509b41bf7
+      internalID: 308739227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_29
+      rect:
+        serializedVersion: 2
+        x: 2937
+        y: 1226
+        width: 1389
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8f0e77a0f1332479e4ff6ee63972a6
+      internalID: -805289252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_30
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 1602
+        width: 349
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1f1ca58b175544fbe80a3b24701ac3
+      internalID: -1032844884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1408
+        width: 1421
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db869063cc6ffde439e6ceb5f903a083
+      internalID: 1806497605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_32
+      rect:
+        serializedVersion: 2
+        x: 4346
+        y: 1157
+        width: 912
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c8fdcc2e950b54190a7fb3959ddabb
+      internalID: 115155925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_33
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 701
+        width: 1745
+        height: 523
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec9641161a0d7488a048d42c72568a
+      internalID: -1504166959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_34
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 592
+        width: 1382
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97226bc389aebf841b173196f2fc125b
+      internalID: -1953599193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_35
+      rect:
+        serializedVersion: 2
+        x: 4674
+        y: 782
+        width: 327
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988dc7c325abe144582b43924f33498a
+      internalID: 933511698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_36
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 76
+        width: 1364
+        height: 470
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7051a36bbe6e13246b4cd87f616bb1a2
+      internalID: 1577113624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_37
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 0
+        width: 1429
+        height: 456
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7eea4a408b8af34b9d8c5b7813085d8
+      internalID: 1141153808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_38
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 12
+        width: 1379
+        height: 457
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96dec24343d72574aa1c287ba17d04cd
+      internalID: 9828865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_39
+      rect:
+        serializedVersion: 2
+        x: 4395
+        y: 438
+        width: 283
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5024b197292fd9d41869ce29bd8deb8f
+      internalID: -227305371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_40
+      rect:
+        serializedVersion: 2
+        x: 5003
+        y: 444
+        width: 302
+        height: 313
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe775453662f32d4296f81d7bfb7df66
+      internalID: -1875391348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: variety_41
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 137
+        width: 317
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881500b3ddf52bb44afbb7b9981e0b5f
+      internalID: -473226856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 70755ebc5d9401f4b8bb686a68535c1b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      variety_0: -1135371415
+      variety_1: 10243513
+      variety_10: -1997667525
+      variety_11: -209886291
+      variety_12: -1323098577
+      variety_13: -358632109
+      variety_14: 844204517
+      variety_15: 2011497421
+      variety_16: 108059746
+      variety_17: -182300091
+      variety_18: 223316988
+      variety_19: 1338076241
+      variety_2: 98866809
+      variety_20: 856620511
+      variety_21: -1573774270
+      variety_22: 1711485418
+      variety_23: -1465490195
+      variety_24: -1854721366
+      variety_25: 1978235239
+      variety_26: -2091979982
+      variety_27: -1721580250
+      variety_28: 308739227
+      variety_29: -805289252
+      variety_3: 1883107405
+      variety_30: -1032844884
+      variety_31: 1806497605
+      variety_32: 115155925
+      variety_33: -1504166959
+      variety_34: -1953599193
+      variety_35: 933511698
+      variety_36: 1577113624
+      variety_37: 1141153808
+      variety_38: 9828865
+      variety_39: -227305371
+      variety_4: 60843879
+      variety_40: -1875391348
+      variety_41: -473226856
+      variety_5: 1840596961
+      variety_6: -530309543
+      variety_7: -1364497957
+      variety_8: 219606634
+      variety_9: -1818106692
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
