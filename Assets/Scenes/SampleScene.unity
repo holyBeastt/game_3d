@@ -1352,8 +1352,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dffb5cac12f6164c86304e2576cb974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  speed: 6
-  jumpForce: 10
+  speedMode: 0
+  baseSpeed: 5
+  speed: 5
+  maxSpeed: 60
+  acceleration: 0.3
+  speedPerMeter: 0.05
+  speedCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  curveTimeScale: 60
+  maxExtraSpeed: 40
+  jumpForce: 12
   laneDistance: 1.3
   laneOffset: -0.28
   laneChangeSpeed: 10
