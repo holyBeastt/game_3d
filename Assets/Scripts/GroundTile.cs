@@ -53,7 +53,15 @@ public class GroundTile : MonoBehaviour
             randomZ += 10f;
         }
 
-        Vector3 coinPosition = new Vector3(targetX, 1f, randomZ);
+        // ⚡ Thêm random độ cao (Y)
+        // coinY = 1f (thấp - dễ ăn), 1.8f hoặc 2.2f (cao - phải nhảy mới ăn được)
+        float[] possibleHeights = { 0.8f, 2.2f };
+        float randomY = possibleHeights[Random.Range(0, possibleHeights.Length)];
+
+        Vector3 coinPosition = new Vector3(targetX, randomY, randomZ);
+
+        // Vector3 coinPosition = new Vector3(targetX, 1f, randomZ);
+
         GameObject temp = Instantiate(coinPrefab, transform);
         temp.transform.position = coinPosition;
     }
