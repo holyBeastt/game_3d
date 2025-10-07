@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class QuizManager : MonoBehaviour
 {
@@ -8,19 +9,21 @@ public class QuizManager : MonoBehaviour
     public CanvasGroup quizPanel;
     public TMP_Text questionText;
     public Button[] answerButtons;
+    public TMP_Text resultText;
 
     private int correctAnswerIndex;
-    private Coin currentCoin; // Lưu coin đang xử lý
+    private Coin currentCoin;
+    private Color defaultBtnColor;
 
     void Start()
     {
+        if (answerButtons != null && answerButtons.Length > 0)
+            defaultBtnColor = answerButtons[0].image.color;
         HideQuiz();
     }
 
-    // Gọi khi nhặt coin
     public void ShowQuizWithCoin(Coin coin)
     {
-        // Nếu đang hiện Victory thì không hiện quiz
         if (GameManager.instance != null && GameManager.instance.IsVictoryActive())
             return;
 
@@ -30,36 +33,41 @@ public class QuizManager : MonoBehaviour
 
     void ShowQuiz()
     {
-        // Câu hỏi mẫu
         questionText.text = "Câu nào là màu của bầu trời?";
         string[] answers = { "Xanh", "Đỏ", "Vàng", "Đen" };
-        correctAnswerIndex = 0; // "Xanh" là đúng
+        correctAnswerIndex = 0;
 
-        // Gán text cho các nút
         for (int i = 0; i < answerButtons.Length; i++)
         {
             answerButtons[i].GetComponentInChildren<TMP_Text>().text = answers[i];
-            int index = i; // tránh lỗi capture biến
+            int index = i;
             answerButtons[i].onClick.RemoveAllListeners();
             answerButtons[i].onClick.AddListener(() => OnAnswerSelected(index));
+            answerButtons[i].image.color = defaultBtnColor;
+            answerButtons[i].interactable = true;
         }
 
-        // Hiện panel
+        if (resultText != null)
+            resultText.text = "";
+
         quizPanel.alpha = 1;
         quizPanel.interactable = true;
         quizPanel.blocksRaycasts = true;
 
-        // Dừng chuyển động (nếu có Player)
-        if (PlayerExists())
-        {
+        if (Player.instance != null)
             Player.instance.enabled = false;
-        }
     }
 
     void OnAnswerSelected(int index)
     {
+        foreach (var btn in answerButtons)
+            btn.interactable = false;
+
         if (index == correctAnswerIndex)
         {
+            StartCoroutine(BlinkButton(answerButtons[index], Color.green));
+            if (resultText != null)
+                resultText.text = "<color=green>Đúng rồi!</color>";
             if (GameManager.instance != null)
             {
                 GameManager.instance.AddScore(1);
@@ -68,19 +76,43 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            StartCoroutine(BlinkButton(answerButtons[index], Color.red));
+            if (resultText != null)
+                resultText.text = "<color=red>Sai rồi!</color>";
             if (GameManager.instance != null)
             {
                 GameManager.instance.LoseLife(1);
             }
         }
 
-        // Hủy coin sau khi trả lời
         if (currentCoin != null)
         {
             Destroy(currentCoin.gameObject);
             currentCoin = null;
         }
 
+        StartCoroutine(HideQuizDelay());
+    }
+
+    IEnumerator BlinkButton(Button btn, Color blinkColor)
+    {
+        float blinkTime = 0.1f;
+        int blinkCount = 4;
+        Color originalColor = defaultBtnColor;
+
+        for (int i = 0; i < blinkCount; i++)
+        {
+            btn.image.color = blinkColor;
+            yield return new WaitForSecondsRealtime(blinkTime);
+            btn.image.color = originalColor;
+            yield return new WaitForSecondsRealtime(blinkTime);
+        }
+        btn.image.color = blinkColor;
+    }
+
+    IEnumerator HideQuizDelay()
+    {
+        yield return new WaitForSecondsRealtime(1f);
         HideQuiz();
     }
 
@@ -90,17 +122,7 @@ public class QuizManager : MonoBehaviour
         quizPanel.interactable = false;
         quizPanel.blocksRaycasts = false;
 
-        // Cho player tiếp tục chạy
-        if (PlayerExists())
-        {
+        if (Player.instance != null)
             Player.instance.enabled = true;
-        }
-    }
-
-    // Tránh lỗi nếu không có Player script
-    bool PlayerExists()
-    {
-        return (typeof(Player).IsAssignableFrom(typeof(MonoBehaviour)) && Player.instance != null)
-            || (Player.instance != null);
     }
 }
