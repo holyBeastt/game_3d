@@ -151,6 +151,15 @@ public class GameUI : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu"); // Thay đổi tên scene menu chính nếu cần
     }
+
+    // ...existing code...
+
+    public bool IsVictoryPanelActive()
+    {
+        return victoryPanel != null && victoryPanel.activeSelf;
+    }
+
+    // ...existing code...
 }
 
 

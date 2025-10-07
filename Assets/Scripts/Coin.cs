@@ -14,21 +14,17 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Khi player ăn coin → cộng điểm
-            if (GameManager.instance != null)
-            {
-                GameManager.instance.AddScore(1);
-            }
-
             // Gọi QuizManager (nếu có)
             QuizManager quiz = FindObjectOfType<QuizManager>();
             if (quiz != null)
             {
-                quiz.TryShowQuiz(); // 60% xác suất hiển thị quiz
+                quiz.ShowQuizWithCoin(this); // Truyền coin vào quiz
             }
-
-            // Hủy coin sau khi ăn
-            Destroy(gameObject);
+            else
+            {
+                // Nếu không có quiz thì hủy coin luôn
+                Destroy(gameObject);
+            }
         }
 
         // Nếu coin chạm ground thì tự xóa sau 2 giây

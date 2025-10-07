@@ -9,22 +9,23 @@ public class QuizManager : MonoBehaviour
     public TMP_Text questionText;
     public Button[] answerButtons;
 
-    [Header("Gameplay")]
-    public int lives = 3;
     private int correctAnswerIndex;
+    private Coin currentCoin; // Lưu coin đang xử lý
 
     void Start()
     {
         HideQuiz();
     }
 
-    // Gọi khi nhặt coin (60% xác suất)
-    public void TryShowQuiz()
+    // Gọi khi nhặt coin
+    public void ShowQuizWithCoin(Coin coin)
     {
-        if (Random.value <= 0.6f) // 60% xác suất
-        {
-            ShowQuiz();
-        }
+        // Nếu đang hiện Victory thì không hiện quiz
+        if (GameManager.instance != null && GameManager.instance.IsVictoryActive())
+            return;
+
+        currentCoin = coin;
+        ShowQuiz();
     }
 
     void ShowQuiz()
@@ -35,7 +36,7 @@ public class QuizManager : MonoBehaviour
         correctAnswerIndex = 0; // "Xanh" là đúng
 
         // Gán text cho các nút
-        for (int i = 0; i < answerButtons.Length; i++) // ✅ đã sửa
+        for (int i = 0; i < answerButtons.Length; i++)
         {
             answerButtons[i].GetComponentInChildren<TMP_Text>().text = answers[i];
             int index = i; // tránh lỗi capture biến
@@ -49,7 +50,7 @@ public class QuizManager : MonoBehaviour
         quizPanel.blocksRaycasts = true;
 
         // Dừng chuyển động (nếu có Player)
-        if (Player.instance != null)
+        if (PlayerExists())
         {
             Player.instance.enabled = false;
         }
@@ -59,26 +60,28 @@ public class QuizManager : MonoBehaviour
     {
         if (index == correctAnswerIndex)
         {
-            Debug.Log("✅ Câu trả lời đúng!");
-            HideQuiz();
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.AddScore(1);
+                GameManager.instance.CheckVictory();
+            }
         }
         else
         {
-            lives--;
-            Debug.Log($"❌ Sai rồi! Còn lại: {lives} mạng");
-            if (lives <= 0)
+            if (GameManager.instance != null)
             {
-                var ui = FindObjectOfType<GameUI>();
-                // if (ui != null)
-                // {
-                //     ui.GameOverPanel.SetActive(true);
-                // }
-            }
-            else
-            {
-                HideQuiz();
+                GameManager.instance.LoseLife(1);
             }
         }
+
+        // Hủy coin sau khi trả lời
+        if (currentCoin != null)
+        {
+            Destroy(currentCoin.gameObject);
+            currentCoin = null;
+        }
+
+        HideQuiz();
     }
 
     void HideQuiz()
@@ -88,9 +91,16 @@ public class QuizManager : MonoBehaviour
         quizPanel.blocksRaycasts = false;
 
         // Cho player tiếp tục chạy
-        if (Player.instance != null)
+        if (PlayerExists())
         {
             Player.instance.enabled = true;
         }
+    }
+
+    // Tránh lỗi nếu không có Player script
+    bool PlayerExists()
+    {
+        return (typeof(Player).IsAssignableFrom(typeof(MonoBehaviour)) && Player.instance != null)
+            || (Player.instance != null);
     }
 }

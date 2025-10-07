@@ -1,10 +1,13 @@
 using UnityEngine;
 using TMPro;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int score = 0;
+    public int lives = 3;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
 
     [Header("Game Settings")]
     public int victoryScore = 5; // Số coin cần để thắng
@@ -22,21 +25,25 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Force set victory score to 5
-        victoryScore = 5;
-        
-        if (scoreText != null)
-            scoreText.SetText(score.ToString());
+        score = 0;
+        lives = 3;
+        gameEnded = false;
+        UpdateUI();
     }
 
-    // Update is called once per frame
     void Update()
+    {
+        UpdateUI();
+    }
+
+    void UpdateUI()
     {
         if (scoreText != null)
             scoreText.SetText(score.ToString());
+        if (livesText != null)
+            livesText.SetText(lives.ToString());
     }
 
     public void AddScore(int points)
@@ -44,13 +51,15 @@ public class GameManager : MonoBehaviour
         if (!gameEnded)
         {
             score += points;
-            
-            // Kiểm tra victory ngay sau khi cộng điểm
-            if (score >= victoryScore)
-            {
-                gameEnded = true;
-                ShowVictory();
-            }
+        }
+    }
+
+    public void CheckVictory()
+    {
+        if (!gameEnded && score >= victoryScore)
+        {
+            gameEnded = true;
+            ShowVictory();
         }
     }
 
@@ -62,9 +71,42 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LoseLife(int amount)
+    {
+        if (!gameEnded)
+        {
+            lives -= amount;
+            if (lives <= 0)
+            {
+                lives = 0;
+                gameEnded = true;
+                GameOver();
+            }
+        }
+    }
+
+    private void GameOver()
+    {
+        if (GameUI.instance != null)
+        {
+            GameUI.instance.ShowGameOver();
+        }
+    }
+
+    public bool IsVictoryActive()
+    {
+        if (GameUI.instance != null)
+        {
+            return GameUI.instance.IsVictoryPanelActive();
+        }
+        return false;
+    }
+
     public void ResetGame()
     {
         score = 0;
+        lives = 3;
         gameEnded = false;
+        UpdateUI();
     }
 }
