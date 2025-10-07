@@ -38,12 +38,23 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    // void UpdateUI()
+    // {
+    //     if (scoreText != null)
+    //         scoreText.SetText(score.ToString());
+    //     if (livesText != null)
+    //         livesText.SetText(lives.ToString());
+    // }
+
     void UpdateUI()
     {
         if (scoreText != null)
             scoreText.SetText(score.ToString());
         if (livesText != null)
-            livesText.SetText(lives.ToString());
+        {
+            // Hiển thị số mạng quiz dạng "Quiz Lives: 3"
+            livesText.SetText("Quiz Lives: " + lives);
+        }
     }
 
     public void AddScore(int points)
