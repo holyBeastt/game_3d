@@ -3,6 +3,14 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 
+[System.Serializable]
+public class QuizQuestion
+{
+    public string question;
+    public string[] answers = new string[4];
+    public int correctIndex;
+}
+
 public class QuizManager : MonoBehaviour
 {
     [Header("UI Elements")]
@@ -11,9 +19,15 @@ public class QuizManager : MonoBehaviour
     public Button[] answerButtons;
     public TMP_Text resultText;
 
+    [Header("Quiz Data")]
+    public QuizQuestion[] questions;
+
     private int correctAnswerIndex;
     private Coin currentCoin;
     private Color defaultBtnColor;
+    private QuizQuestion currentQuestion;
+    private bool isQuizActive = false;
+    private int currentQuizIndex = 0; // Đếm thứ tự quiz
 
     void Start()
     {
@@ -27,19 +41,37 @@ public class QuizManager : MonoBehaviour
         if (GameManager.instance != null && GameManager.instance.IsVictoryActive())
             return;
 
+        if (isQuizActive)
+            return;
+
         currentCoin = coin;
         ShowQuiz();
     }
 
     void ShowQuiz()
     {
-        questionText.text = "Câu nào là màu của bầu trời?";
-        string[] answers = { "Xanh", "Đỏ", "Vàng", "Đen" };
-        correctAnswerIndex = 0;
+        isQuizActive = true;
+
+        if (questions == null || questions.Length == 0)
+        {
+            Debug.LogWarning("Chưa có câu hỏi quiz nào!");
+            return;
+        }
+
+        // Lấy lần lượt từng câu hỏi
+        currentQuestion = questions[currentQuizIndex];
+        correctAnswerIndex = currentQuestion.correctIndex;
+
+        // Tăng chỉ số, nếu hết thì quay lại đầu
+        currentQuizIndex++;
+        if (currentQuizIndex >= questions.Length)
+            currentQuizIndex = 0;
+
+        questionText.text = currentQuestion.question;
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
-            answerButtons[i].GetComponentInChildren<TMP_Text>().text = answers[i];
+            answerButtons[i].GetComponentInChildren<TMP_Text>().text = currentQuestion.answers[i];
             int index = i;
             answerButtons[i].onClick.RemoveAllListeners();
             answerButtons[i].onClick.AddListener(() => OnAnswerSelected(index));
@@ -118,6 +150,8 @@ public class QuizManager : MonoBehaviour
 
     void HideQuiz()
     {
+        isQuizActive = false;
+
         quizPanel.alpha = 0;
         quizPanel.interactable = false;
         quizPanel.blocksRaycasts = false;
