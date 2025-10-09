@@ -14,17 +14,23 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Gọi QuizManager (nếu có)
-            QuizManager quiz = FindObjectOfType<QuizManager>();
-            if (quiz != null)
+            // 68% xác suất hiện quiz
+            if (Random.value < 0.68f)
             {
-                quiz.ShowQuizWithCoin(this); // Truyền coin vào quiz
+                QuizManager quiz = FindObjectOfType<QuizManager>();
+                if (quiz != null)
+                {
+                    quiz.ShowQuizWithCoin(this); // Truyền coin vào quiz
+                    return; // Không hủy coin, quiz sẽ xử lý
+                }
             }
-            else
+            // Nếu không hiện quiz thì cộng điểm luôn
+            if (GameManager.instance != null)
             {
-                // Nếu không có quiz thì hủy coin luôn
-                Destroy(gameObject);
+                GameManager.instance.AddScore(1);
+                GameManager.instance.CheckVictory();
             }
+            Destroy(gameObject);
         }
 
         // Nếu coin chạm ground thì tự xóa sau 2 giây
